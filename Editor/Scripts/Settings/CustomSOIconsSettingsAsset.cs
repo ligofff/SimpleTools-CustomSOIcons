@@ -24,5 +24,10 @@ namespace Ligofff.CustomSOIcons.Editor
                 return baseSettings;
             }
         }
+
+        private void OnValidate()
+        {
+            EditorCustomSOIcons.Refresh();
+        }
     }
 }
