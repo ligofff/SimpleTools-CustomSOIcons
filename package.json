@@ -1,0 +1,18 @@
+{
+	"name": "com.ligofff.asset-icons",
+	"displayName": "Asset icons",
+	"version": "0.0.5",
+	"unity": "2022.2",
+	"description": "Small editor plugin for show icons on ScriptableObject assets in project and fields",
+	"category": "",
+	"author": {
+		"name": "Ligofff",
+		"email": "liga@ligofff.ru",
+		"url": "https://github.com/fffogil"
+	},
+	"samples": [
+        {
+			
+        }
+    ]
+}

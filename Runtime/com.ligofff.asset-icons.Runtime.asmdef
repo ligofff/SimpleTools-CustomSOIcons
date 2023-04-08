@@ -1,0 +1,14 @@
+{
+    "name": "com.ligofff.asset-icons.Runtime",
+    "rootNamespace": "Ligofff.AssetIcons",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
