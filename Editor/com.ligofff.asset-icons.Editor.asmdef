@@ -2,7 +2,7 @@
     "name": "com.ligofff.asset-icons.Editor",
     "rootNamespace": "Ligofff.AssetIcons.Editor",
     "references": [
-        "GUID:7204a0d8befa1754db28c304493af52e"
+        "GUID:64b39e08d0c569949bdab3af0602192b"
     ],
     "includePlatforms": [
         "Editor"
