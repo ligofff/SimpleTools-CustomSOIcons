@@ -16,26 +16,27 @@ namespace Ligofff.CustomSOIcons.Editor
         private static Dictionary<string, Tuple<Func<Sprite>, CustomSOIconsSettings>> _iconGettersCache;
 
         private static CustomSOIconsSettingsAsset _settings;
-
+        
         [DidReloadScripts]
         private static void EditorCustomSOIconsStart()
         {
-            _iconDeclarators = new Dictionary<Type, ICustomEditorIconDeclarator>();
-            _iconGettersCache = new Dictionary<string, Tuple<Func<Sprite>, CustomSOIconsSettings>>();
-            CollectDeclarators();
-            
+            RefreshCaches();
             EditorApplication.projectWindowItemOnGUI += ItemOnGUI;
         }
-
+        
         public static void Refresh()
+        {
+            RefreshCaches();
+            _settings = CustomAssetIconsSettingsMenu.GetSettings();
+        }
+
+        private static void RefreshCaches()
         {
             _iconDeclarators = new Dictionary<Type, ICustomEditorIconDeclarator>();
             _iconGettersCache = new Dictionary<string, Tuple<Func<Sprite>, CustomSOIconsSettings>>();
             CollectDeclarators();
-
-            _settings = CustomAssetIconsSettingsMenu.GetSettings();
         }
-
+        
         private static void CollectDeclarators()
         {
             var declarators = 
@@ -61,14 +62,10 @@ namespace Ligofff.CustomSOIcons.Editor
         public static Tuple<Func<Sprite>, CustomSOIconsSettings> GetOrCreateIconGetter(string guid)
         {
             if (_settings is null)
-            {
                 _settings = CustomAssetIconsSettingsMenu.GetSettings();
-            }
             
             if (TryGetFromCache(guid, out Tuple<Func<Sprite>, CustomSOIconsSettings> cachedGetter))
-            {
                 return cachedGetter;
-            }
             
             string assetPath = AssetDatabase.GUIDToAssetPath(guid);
             var asset = AssetDatabase.LoadAssetAtPath<Object>(assetPath);
@@ -102,7 +99,7 @@ namespace Ligofff.CustomSOIcons.Editor
             DrawIcon(rect, icon, settings);
         }
 
-        public static Sprite GetIconFromGetter(Func<Sprite> getter, CustomSOIconsSettings settings)
+        private static Sprite GetIconFromGetter(Func<Sprite> getter, CustomSOIconsSettings settings)
         {
             if (settings == null) return null;
 
@@ -115,7 +112,7 @@ namespace Ligofff.CustomSOIcons.Editor
             return icon;
         }
         
-        public static Func<Sprite> GetIconGetter(Object asset)
+        private static Func<Sprite> GetIconGetter(Object asset)
         {
             Func<Sprite> getter;
             

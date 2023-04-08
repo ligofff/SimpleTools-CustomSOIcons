@@ -14,7 +14,8 @@ namespace Ligofff.CustomSOIcons.Editor
 
         public CustomSOIconsSettings GetSettings(Object asset)
         {
-            if (overrides == null) return null;
+            if (overrides == null) return baseSettings;
+            
             if (overrides.FirstOrDefault(over => over.typeName == asset.GetType().Name) is { } iconOverride)
             {
                 return iconOverride.settings;
