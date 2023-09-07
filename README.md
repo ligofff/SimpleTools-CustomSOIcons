@@ -8,6 +8,8 @@
   <img width="600" src="https://user-images.githubusercontent.com/44195161/230739721-1632e02a-9d62-4215-99c1-0ab3c5e965ab.png">
 </p>
 
+> [My Telegram channel](https://t.me/ligofff_blog) if you want more
+
 ## Overview
 
 This addon speeds up the interaction with the editor by x100 times - you no longer have to look at the names when you look for an object, because you can simply display the icon directly on the asset.
