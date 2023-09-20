@@ -39,7 +39,7 @@ You can change scale of icon, and set background if needed.
 
 ### Install via GIT URL
 
-Go to ```Package Manager``` -> ```Add package from GIT url...``` -> Enter ```https://github.com/fffogil/SimpleTools-CustomSOIcons.git``` -> Click ```Add```
+Go to ```Package Manager``` -> ```Add package from GIT url...``` -> Enter ```https://github.com/ligofff/SimpleTools-CustomSOIcons.git``` -> Click ```Add```
 
 You will need to have Git installed and available in your system's PATH.
 
