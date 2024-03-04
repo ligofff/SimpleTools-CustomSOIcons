@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using UnityEditor.Sprites;
 using UnityEngine;
 
 namespace Ligofff.CustomSOIcons.Editor
@@ -30,7 +31,7 @@ namespace Ligofff.CustomSOIcons.Editor
         {
             if (sprite == null) return;
             Rect spriteRect = sprite.rect;
-            Texture2D tex = sprite.texture;
+            Texture2D tex = SpriteUtility.GetSpriteTexture(sprite, false);
             GUI.DrawTextureWithTexCoords(rect, tex, 
                 new Rect(spriteRect.x / tex.width, spriteRect.y / tex.height, spriteRect.width / tex.width, spriteRect.height / tex.height));
         }
