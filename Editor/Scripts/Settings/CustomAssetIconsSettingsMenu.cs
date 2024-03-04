@@ -6,14 +6,14 @@ namespace Ligofff.CustomSOIcons.Editor
 {
     public static class CustomAssetIconsSettingsMenu
     {
-        [MenuItem("Tools/Ligofff/Open custom SO icons settings")]
+        [MenuItem("Ligofff/Open custom SO icons settings")]
         private static void OpenSettings()
         {
             var settings = GetSettings();
             Selection.SetActiveObjectWithContext(settings, settings);
         }
         
-        [MenuItem("Tools/Ligofff/Refresh custom SO icons")]
+        [MenuItem("Ligofff/Refresh custom SO icons")]
         private static void RefreshIcons()
         {
             EditorCustomSOIcons.Refresh();
